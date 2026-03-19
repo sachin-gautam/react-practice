@@ -64,3 +64,43 @@
     background-color: black;
     color: white;
 }
+
+.skeleton-card {
+    border: 1px solid #ddd;
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #eeeeee 25%,
+        #dddddd 37%,
+        #eeeeee 63%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.skeleton-img {
+    width: 100%;
+    height: 120px;
+}
+
+.skeleton-text {
+    height: 16px;
+    width: 100%;
+}
+
+.skeleton-text.short {
+    width: 60%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}

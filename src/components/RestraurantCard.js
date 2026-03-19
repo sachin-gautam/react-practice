@@ -1,18 +1,13 @@
-import { PLACEHOLDER_LOGO_URL } from "../utils/constants";
-
 const RestraurantCard = (props) => {
-  const { resName, items, rating, deliveryTime } = props;
+  const { restaurant } = props;
+  const { VendorListingWebImageName, Name, Cuisine, Address1, Distance } = restaurant;
   return (
     <div className="res-card">
-      <img
-        className="res-logo"
-        src={PLACEHOLDER_LOGO_URL}
-        alt="res-logo"
-      />
-      <h3>{resName}</h3>
-      <h4>{items}</h4>
-      <h4>{rating} Stars</h4>
-      <h4>{deliveryTime}</h4>
+      <img className="res-logo" src={VendorListingWebImageName} alt="res-logo" />
+      <h3>{Name}</h3>
+      <h4>{Cuisine}</h4>
+      <h4>{Address1}</h4>
+      <h4>{Distance}km away</h4>
     </div>
   );
 };
